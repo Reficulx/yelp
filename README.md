@@ -1,6 +1,5 @@
 ## IDS 721 Final Project
 
-#### By Yanxi Li and Ryan Fang
 
 ![stack](img/flask_docker_kubernetes.png)
 
