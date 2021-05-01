@@ -1,5 +1,7 @@
 ## IDS 721 Final Project
 
+#### By Yanxi Li and Yuan Fang
+
 ![stack](img/flask_docker_kubernetes.png)
 
 ML Modeling and Platform: This project uses `Pytorch` ML framework to classfiy the pictures containing food or drink. For example, the following image will be classified as drink.  
