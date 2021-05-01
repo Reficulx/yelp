@@ -1,16 +1,16 @@
-### IDS 721 Final Project
+## IDS 721 Final Project
 
 ![stack](img/flask_docker_kubernetes.png)
 
 ML Modeling and Platform: This project uses `Pytorch` ML framework to classfiy the pictures containing food or drink. For example, the following image will be classified as drink.  
 
-[image here]
+![drink](img/drink.jpeg)
 
 Cloud Platform: Flask + Docker + Google Kubernetes Engine 
 
 Testing: This project has used Locust to see the elastic scale-up performance vial load test with Locust. 
 
-#### Flask 
+### Flask 
 
 This flask application classifies the image uploaded to the website using a deep learning model build on Pytorch. 
 
@@ -30,11 +30,11 @@ This flask application classifies the image uploaded to the website using a deep
 
 1. First, create a compute engine through the google cloud console like usual. Make sure that you have selected to allow HTTP traffice and HTTPS tranffic. 
 
-   [image here]
+   ![vm](img/compute_instance.png)
 
 2. Second, create a firewall rule for your computing instance in VPC networking section -firewall tab. This step is essensial for you to access your application deployed on cloud. The specific setting is shown below. 
 
-   [image here]
+   ![firewall](img/firewall_rule.png)
 
 3. Third, SSH to your virutal machine by clicking the SSH icon on the right or your VM. A terminal window for your virtual machine will pop up. In the terminal window, use the following command to remove the existing Docker, Installing the lastest Docker, and Verify the installation by viewing the `Hello from Docker!` message by running the built-in `hello-world` app in Docker. 
 
@@ -66,7 +66,7 @@ This flask application classifies the image uploaded to the website using a deep
 
       The output should be like something shown below in the picture. And we could see that our model correctly predicts the picture. You could use any picture with the url you want to do the testing. 
 
-      [image here]
+      ![docker_pred](img/docker_pred_result.png)
 
    3. Upload Your Docker image for the application to the Docker Hub using the following command. You have to register an account first in Docker Hub website before you could do this. 
 
@@ -80,7 +80,7 @@ This flask application classifies the image uploaded to the website using a deep
 
 1. Create a Kubernetes cluster through the Google Cloud Console using the default setting and connect to the cluster usign the `connect` button. Then a terminal for that cluster will pop up. 
 
-   [image here]
+   ![kuber](img/kubernetes.png)
 
 2. Create a deployment for your containerized application stored in your docker hub account. 
 
@@ -94,7 +94,7 @@ This flask application classifies the image uploaded to the website using a deep
 
 3. Now we could do the test to the deployed application. The code and result are shown below. 
 
-   [image here]
+   ![kuber_result](img/kube_pred_result.png)
 
 #### Locust Testing 
 
@@ -102,11 +102,11 @@ This flask application classifies the image uploaded to the website using a deep
 
 2. Then run `locust -f locustfile.py` to do the test. The setup window is shown below. 
 
-   [image here]
+   ![locust_setup](img/locust_setup.png)
 
    The testing result is shown below, we obviously could observe the ealstic scale up through the following result. 
 
-   [image here]
+   ![scale_up](img/scale_up_result.png)
 
 3. Note that, there might be an error showing up saying that:
 
